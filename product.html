@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جزئیات غذا | Foodify</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body data-page="product">
+  <header class="navbar"><a class="logo" href="index.html">Foodify<span>.</span></a><button class="menu-toggle"
+      id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+    <nav id="mainNav"><a href="index.html">خانه</a><a href="index.html#foods">منوی غذا</a><a href="cart.html">سبد
+        خرید</a></nav><a href="cart.html" class="nav-cart">سبد خرید 🛒</a>
+  </header>
+  <main class="page-container"><a href="index.html#foods" class="back-link">← بازگشت به منو</a>
+    <section class="glass-card product-detail">
+      <div class="product-detail-image"><img id="productImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReRs3MYRg1zjrT_vQyf906L_jT3QI6rS1ynLgWmQgIthvPvHTMRT2Wr8o&s=10" alt=""></div>
+      <div class="product-detail-info"><span class="eyebrow">انتخاب خوشمزه شما</span>
+        <h1 id="productName">نام غذا</h1>
+        <p id="productDescription"></p>
+        <div class="detail-price" id="productPrice"></div>
+        <div class="quantity-control"><button id="minusBtn" type="button" aria-label="کم کردن تعداد">−</button><strong
+            id="quantity">۱</strong><button id="plusBtn" type="button" aria-label="زیاد کردن تعداد">+</button></div>
+        <button id="addToCartBtn" class="primary-btn">افزودن به سبد خرید</button>
+      </div>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>

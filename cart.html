@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سبد خرید | Foodify</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body data-page="cart">
+  <header class="navbar">
+    <a class="logo" href="index.html">Foodify<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+    <nav id="mainNav"><a href="index.html">خانه</a><a href="index.html#foods">منوی غذا</a><a href="cart.html">سبد
+        خرید</a></nav>
+    <a href="cart.html" class="nav-cart">سبد خرید 🛒 <span id="navCartCount">۰</span></a>
+  </header>
+  <main class="page-container">
+    <div class="section-heading">
+      <div><span class="eyebrow">تقریباً آماده‌ایم!</span>
+        <h1>سبد خرید شما</h1>
+      </div><a href="index.html#foods" class="back-link">ادامه خرید ←</a>
+    </div>
+    <div class="cart-layout">
+      <section id="cartItems" class="cart-items" aria-live="polite"></section>
+      <aside class="summary glass-card">
+        <h2>خلاصه سفارش</h2>
+        <div class="summary-row"><span>مبلغ غذاها</span><strong id="subtotal">۰ تومان</strong></div>
+        <div class="summary-row"><span>تخفیف</span><strong id="discount">۰ تومان</strong></div>
+        <div class="summary-row"><span>هزینه ارسال</span><strong id="shipping">۰ تومان</strong></div>
+        <div class="summary-row"><span>جمع قبل از تخفیف و ارسال</span><strong id="beforeTotal">۰ تومان</strong></div>
+        <div class="coupon-box"><label for="couponInput">کد تخفیف</label>
+          <div class="coupon-controls"><input id="couponInput" type="text" placeholder="مثلاً FOOD10"
+              autocomplete="off"><button id="applyCoupon" class="small-btn">اعمال</button></div><small
+            id="couponMessage" aria-live="polite">با کد FOOD10 ده درصد تخفیف بگیر.</small>
+        </div>
+        <div class="summary-row total-row"><span>مبلغ نهایی</span><strong id="total">۰ تومان</strong></div>
+        <p class="shipping-note" id="shippingNote"></p>
+        <button id="checkoutBtn" class="primary-btn full-btn">ادامه و ثبت سفارش</button>
+      </aside>
+    </div>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101027">
+    <title>Foodify | سفارش آنلاین غذا</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body data-page="home">
+    <header class="navbar">
+        <a class="logo" href="index.html">Foodify<span>.</span></a>
+        <form class="search-form" id="searchForm" role="search">
+            <input id="foodSearch" type="search" placeholder="جست‌وجوی غذای مورد علاقه..." aria-label="جست‌وجوی غذا">
+            <button type="submit" aria-label="جست‌وجو">⌕</button>
+        </form>
+        <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+        <nav id="mainNav">
+            <a href="index.html">خانه</a>
+            <a href="#foods">منوی غذا</a>
+            <a href="cart.html">سبد خرید <span class="cart-count" id="navCartCount">۰</span></a>
+        </nav>
+        <a href="cart.html" class="nav-cart">سبد خرید 🛒 <span id="navCartCountDesktop">۰</span></a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">طعم خوب، حال خوب</span>
+                <h1>غذای مورد علاقه‌ات<br>فقط چند کلیک فاصله داره! 👋</h1>
+                <p>از بین غذاهای خوشمزه ما انتخاب کن و سفارش خودت را با چند کلیک ثبت کن.</p>
+                <a href="#foods" class="primary-btn">مشاهده منو</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsEERqbMYg4MDExiqzWwV4JGVAlsvGUM-FQ1B3iLoOg1ihlD2er5tG9Xw&s=10" alt="همبرگر خوشمزه">
+            </div>
+        </section>
+
+        <section class="section" id="foods">
+            <div class="section-heading">
+                <div><span class="eyebrow">منوی ویژه</span>
+                    <h2>غذاهای محبوب</h2>
+                </div>
+                <span class="muted">انتخاب کن، سفارش بده، لذت ببر!</span>
+            </div>
+            <p id="searchMessage" class="search-message" aria-live="polite"></p>
+            <div class="food-grid" id="foodGrid">
+                <article class="food-card" data-id="burger">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReRs3MYRg1zjrT_vQyf906L_jT3QI6rS1ynLgWmQgIthvPvHTMRT2Wr8o&s=10" alt="برگر مخصوص">
+                    <div class="food-info"><span class="food-category">فست فود</span>
+                        <h3>برگر مخصوص</h3>
+                        <p>برگر گوشت آبدار با پنیر، کاهو، گوجه و سس ویژه.</p>
+                        <div class="food-bottom"><strong>۱۸۵,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="burger">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0" aria-label="تعداد برگر مخصوص"></label><button class="add-btn"
+                                data-add="burger">افزودن به سبد</button></div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="pizza"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT06_soN3JCAd29LOqi6KnE1I2BX1Altj1Z10bSS6TLCg&s" alt="پیتزا پپرونی">
+                    <div class="food-info"><span class="food-category">پیتزا</span>
+                        <h3>پیتزا پپرونی</h3>
+                        <p>پنیر کش‌دار، پپرونی خوش‌عطر و سس گوجه مخصوص.</p>
+                        <div class="food-bottom"><strong>۲۴۰,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="pizza">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0" aria-label="تعداد پیتزا پپرونی"></label><button class="add-btn"
+                                data-add="pizza">افزودن به سبد</button></div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="fries"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJrEi7bJaDxgUSPAP7DzVPwTop0IorZfvzmiooJ6W21n5Mom4JJm82-hE&s=10" alt="سیب زمینی ویژه">
+                    <div class="food-info"><span class="food-category">پیش‌غذا</span>
+                        <h3>سیب زمینی ویژه</h3>
+                        <p>سیب‌زمینی طلایی و ترد با ادویه و سس مخصوص.</p>
+                        <div class="food-bottom"><strong>۹۵,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="fries">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0" aria-label="تعداد سیب زمینی"></label><button class="add-btn"
+                                data-add="fries">افزودن به سبد</button></div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="sandwich"><img
+                        src="https://www.eatingwell.com/thmb/lWAiwknQ9yapq6UuXAYrUdrcKbk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Rotisserie-Chicken-Sandwich-202-2000-485b673fe411460e95b512fbf805a5d9.jpg" alt="ساندویچ مرغ">
+                    <div class="food-info"><span class="food-category">ساندویچ</span>
+                        <h3>ساندویچ مرغ</h3>
+                                <p>مرغ گریل‌شده، سبزیجات تازه و سس خوش‌طعم.</p>
+                                <div class="food-bottom"><strong>۱۵۵,۰۰۰ تومان</strong><button class="small-btn"
+                                        data-view="sandwich">جزئیات</button></div>
+                                <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1"
+                                            max="20" value="0" aria-label="تعداد ساندویچ مرغ"></label><button
+                                        class="add-btn" data-add="sandwich">افزودن به سبد</button></div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="pasta"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVb_aBCcXwWQavw_ZrJudTmZmPKJbVAgEER9StPXyLbDyAa0XobpawbZU&s=10"
+                        alt="پاستا آلفردو">
+                    <div class="food-info"><span class="food-category">پاستا</span>
+                        <h3>پاستا آلفردو</h3>
+                        <p>پاستای لطیف با سس خامه‌ای، قارچ و پنیر پارمزان.</p>
+                        <div class="food-bottom"><strong>۱۹۵,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="pasta">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0"></label><button class="add-btn" data-add="pasta">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="salad"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBHwcLtuRUPVYOKw_LjFB_xsytz7Wrt5OC-HU1BfDr5g1eUtGWkR0BWn0&s=10" alt="سالاد سزار">
+                    <div class="food-info"><span class="food-category">سالاد</span>
+                        <h3>سالاد سزار</h3>
+                        <p>کاهوی تازه، مرغ گریل، نان کروتان و سس سزار.</p>
+                        <div class="food-bottom"><strong>۱۴۵,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="salad">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0"></label><button class="add-btn" data-add="salad">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="hotdog"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgd7Ghg8EzHrK0RPZdHLSCCYKQeosVJHd32Useh7SXA4j6HVOwebE4Ma8&s=10" alt="هات داگ">
+                    <div class="food-info"><span class="food-category">فست فود</span>
+                        <h3>هات‌داگ ویژه</h3>
+                        <p>هات‌داگ گریل‌شده با پنیر، خیارشور و سس خردل.</p>
+                        <div class="food-bottom"><strong>۱۳۵,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="hotdog">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0"></label><button class="add-btn" data-add="hotdog">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="friedchicken"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy1FTUDTm-SKj_t7pfi43hgtcXi-NDlVKqsl4XyOpd7WiNRNUeI26M0ct3&s=10" alt="مرغ سوخاری">
+                    <div class="food-info"><span class="food-category">سوخاری</span>
+                        <h3>مرغ سوخاری</h3>
+                        <p>تکه‌های مرغ با روکش طلایی و ادویه‌های خوش‌عطر.</p>
+                        <div class="food-bottom"><strong>۲۲۰,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="friedchicken">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0"></label><button class="add-btn" data-add="friedchicken">افزودن به
+                                سبد</button></div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="tacos"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWJYGvCU5PvuYOyCv3EywcIKQ-1bxKcZu91ig2DKgDB5iYzf83DC2UTCI&s=10"
+                        alt="تاکو">
+                    <div class="food-info"><span class="food-category">غذای مکزیکی</span>
+                        <h3>تاکو گوشت</h3>
+                        <p>نان تاکو با گوشت مزه‌دار، سبزیجات و سس سالسا.</p>
+                        <div class="food-bottom"><strong>۱۸۰,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="tacos">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0"></label><button class="add-btn" data-add="tacos">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="sushi"><img
+                        src="https://png.pngtree.com/png-clipart/20241022/original/pngtree-japanese-cuisine-flavorful-salmon-sushi-rolls-with-authentic-ingredients-png-image_16451287.png" alt="سوشی">
+                    <div class="food-info"><span class="food-category">غذای آسیایی</span>
+                        <h3>رول سوشی</h3>
+                        <p>رول برنج و سبزیجات با ترکیب طعمی ملایم و تازه.</p>
+                        <div class="food-bottom"><strong>۲۶۰,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="sushi">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0"></label><button class="add-btn" data-a dd="sushi">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="lasagna"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvHq8fTdTrXbm7l0fDIxk-nOrRL9eSI6uwPFWOB_LFaEmFOFrKqa_3D7V&s=10" alt="لازانیا">
+                    <div class="food-info"><span class="food-category">غذای ایتالیایی</span>
+                        <h3>لازانیا</h3>
+                        <p>لایه‌های پاستا با گوشت، سس گوجه و پنیر آب‌شده.</p>
+                        <div class="food-bottom"><strong>۲۱۰,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="lasagna">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0"></label><button class="add-btn" data-add="lasagna">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="food-card" data-id="falafel"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLZYy9F17Zcumc6fJmoBo-Om0pzhLHYxrYhwgzKgWY7_BZldVggFHBCco&s=10" alt="فلافل">
+                    <div class="food-info"><span class="food-category">ساندویچ</span>
+                        <h3>ساندویچ فلافل</h3>
+                        <p>فلافل تازه و ترد با سبزیجات، ترشی و سس مخصوص.</p>
+                        <div class="food-bottom"><strong>۱۱۰,۰۰۰ تومان</strong><button class="small-btn"
+                                data-view="falafel">جزئیات</button></div>
+                        <div class="card-actions"><label>تعداد <input class="food-qty" type="number" min="1" max="20"
+                                    value="0"></label><button class="add-btn" data-add="falafel">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©️ 2026 Foodify — تجربه‌ای خوشمزه از سفارش غذا</p>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>

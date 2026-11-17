@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ثبت سفارش | Foodify</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body data-page="checkout">
+  <header class="navbar"><a class="logo" href="index.html">Foodify<span>.</span></a><button class="menu-toggle"
+      id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+    <nav id="mainNav"><a href="index.html">خانه</a><a href="cart.html">سبد خرید</a></nav><a href="cart.html"
+      class="nav-cart">سبد خرید 🛒</a>
+  </header>
+  <main class="page-container narrow-container"><span class="eyebrow">مرحله آخر</span>
+    <h1>اطلاعات تحویل سفارش</h1>
+    <form id="checkoutForm" class="glass-card checkout-form">
+      <label for="fullName">نام و نام خانوادگی</label><input id="fullName" name="fullName" type="text"
+        placeholder="مثلاً علی رضایی" required>
+      <label for="phone">شماره تماس</label><input id="phone" name="phone" type="tel" inputmode="numeric"
+        placeholder="مثلاً 09123456789" pattern="09[0-9]{9}" required>
+      <label for="city">شهر</label><input id="city" name="city" type="text" placeholder="نام شهر" required>
+      <label for="address">آدرس دقیق</label><textarea id="address" name="address" rows="4"
+        placeholder="خیابان، کوچه، پلاک و واحد..." required></textarea>
+      <label for="description">توضیحات سفارش (اختیاری)</label><textarea id="description" name="description" rows="3"
+        placeholder="مثلاً زنگ واحد را بزنید"></textarea>
+      <div class="checkout-total">مبلغ قابل پرداخت:<strong id="checkoutTotal">۰ تومان</strong></div>
+      <button type="submit" class="primary-btn full-btn">تأیید و ثبت سفارش</button><a href="cart.html"
+        class="back-link">بازگشت به سبد خرید</a>
+    </form>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
